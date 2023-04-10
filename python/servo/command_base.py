@@ -1004,7 +1004,8 @@ install them, let us know by filing a bug!")
         # Always check if all needed MSVC dependencies are installed
         if "msvc" in target_platform:
             Registrar.dispatch("bootstrap", context=self.context)
-
+        
+        '''
         if self.config["tools"]["use-rustup"]:
             self.ensure_rustup_version()
             toolchain = self.rust_toolchain()
@@ -1034,7 +1035,7 @@ install them, let us know by filing a bug!")
                 ["rustup", "target", "list", "--installed", "--toolchain", toolchain]
             ):
                 check_call(["rustup", "target", "add", "--toolchain", toolchain, target])
-
+        '''
         self.context.bootstrapped = True
 
     def ensure_rustup_version(self):
