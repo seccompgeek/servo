@@ -101,7 +101,7 @@ servo_rand = { path = "../rand" }
 servo_url = { path = "../url" }
 smallvec = { version = "1.9", features = ["union"] }
 sparkle = "0.1"
-style = { path = "../style", features = ["servo"] }
+style = { path = "../style", features = ["servo", "servo-layout-2013"], default-features = true }
 style_traits = { path = "../style_traits" }
 swapper = "0.1"
 tempfile = "3"
