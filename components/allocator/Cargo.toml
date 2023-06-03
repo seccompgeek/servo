@@ -10,9 +10,7 @@ publish = false
 path = "lib.rs"
 
 [target.'cfg(not(windows))'.dependencies]
-jemalloc-sys = { version = "0.3.2" }
+mimalloc_rust = {git="https://github.com/seccompgeek/mimalloc_rust.git"}
 
 [target.'cfg(windows)'.dependencies]
 winapi = { version = "0.3", features = ["heapapi"] }
-
-mimalloc = "0.1.37"
