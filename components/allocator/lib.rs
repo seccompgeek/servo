@@ -4,7 +4,7 @@
 
 //! Selecting the default global allocator for Servo
 
-pub extern crate mimalloc_rust;
+pub use crate mimalloc_rust;
 pub use crate::platform::*;
 
 /*#[cfg(not(windows))]
@@ -13,7 +13,6 @@ pub use jemalloc_sys;*/
 #[cfg(not(windows))]
 mod platform {
     pub use super::mimalloc_rust;
-    use std::alloc::{GlobalAlloc, Layout};
     use std::os::raw::{c_int, c_void};
 
     /// Get the size of a heap block.
