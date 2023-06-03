@@ -4,7 +4,7 @@
 
 //! Selecting the default global allocator for Servo
 
-pub use crate mimalloc_rust;
+pub use mimalloc_rust;
 pub use crate::platform::*;
 
 /*#[cfg(not(windows))]
